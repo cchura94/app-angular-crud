@@ -1,0 +1,30 @@
+@if (cargando()) {
+<h1>Cargando...</h1>
+}
+<div class="container my-5">
+  <h1 class="text-center mb-4 display-5 fw-bold text-primary">Lista de Publicaciones</h1>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    @for (publi of publicaciones(); track $index) {
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0 hover-shadow">
+          @if (publi.cover_image) {
+            <img [src]="publi.cover_image" class="card-img-top object-fit-cover" style="height: 220px;" alt="{{ publi.title }}">
+          } @else {
+            <div class="bg-light d-flex align-items-center justify-content-center" style="height: 220px;">
+              <i class="bi bi-image text-muted fs-1"></i>
+            </div>
+          }
+
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold text-dark mb-3">{{ publi.title }}</h5>
+            
+            <div class="mt-auto">
+              <a href="#" class="btn btn-outline-primary btn-sm w-100">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

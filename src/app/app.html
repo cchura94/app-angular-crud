@@ -1,3 +1,30 @@
-<app-producto></app-producto>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-uppercase tracking-wider" routerLink="/">
+      <i class="bi bi-journal-text me-2"></i>MiApp
+    </a>
 
-<router-outlet />
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-2">
+        <li class="nav-item">
+          <a class="nav-link px-3" routerLink="/" routerLinkActive="active">
+            <i class="bi bi-house-door me-1"></i> BLOG
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" routerLink="/productos" routerLinkActive="active">
+            <i class="bi bi-box-seam me-1"></i> CRUD Productos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+  <router-outlet />
+</main>
