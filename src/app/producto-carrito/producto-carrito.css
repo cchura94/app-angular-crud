@@ -1,0 +1,28 @@
+.img-producto{
+    height:220px;
+    object-fit:cover;
+}
+
+.img-carrito{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card{
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.card-title{
+    font-weight:600;
+}
+
+button{
+    font-weight:600;
+}

@@ -30,6 +30,9 @@ export class Producto {
     this.descripcion = "";
     this.imagen = "";
     this.estado = true;
+
+    const prods = localStorage.getItem("productos") || "[]";
+    this.productos = JSON.parse(prods);
   }
 
   // metodos o funciones
@@ -53,6 +56,9 @@ export class Producto {
         });
 
     }
+
+    // almacen datos en LocalStorage
+    localStorage.setItem("productos", JSON.stringify(this.productos))
 
       this.nombre = "";
       this.precio = 0;
